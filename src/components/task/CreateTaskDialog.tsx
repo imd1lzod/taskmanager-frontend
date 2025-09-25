@@ -43,8 +43,6 @@ export default function CreateTaskDialog({ open, onOpenChange, boardId = '1' }: 
     register,
     handleSubmit,
     reset,
-    setValue,
-    watch,
     formState: { errors },
   } = useForm<CreateTaskData>({
     defaultValues: {

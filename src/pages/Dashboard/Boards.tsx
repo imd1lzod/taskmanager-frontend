@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
-import { fetchBoards, createBoard, deleteBoard } from '../../store/slices/boardSlice'
+import { createBoard, deleteBoard } from '../../store/slices/boardSlice'
 import { Button } from '../../components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card'
 import { Input } from '../../components/ui/input'

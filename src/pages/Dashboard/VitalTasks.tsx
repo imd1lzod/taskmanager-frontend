@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useAppSelector } from '../../hooks/redux'
-import { Button } from '../../components/ui/button'
+// Removed unused Button import
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card'
-import { Plus, Trash2, Edit, Circle, Play, CheckCircle } from 'lucide-react'
+import { Trash2, Edit, Circle, Play, CheckCircle } from 'lucide-react'
 import EditTaskDialog from '../../components/task/EditTaskDialog'
 import { useTasks } from '../../hooks/tasks'
 
@@ -10,7 +10,7 @@ export default function VitalTasks() {
   const [selectedTask, setSelectedTask] = useState<any>(null)
   const [isEditTaskOpen, setIsEditTaskOpen] = useState(false)
   const [selectedTaskForEdit, setSelectedTaskForEdit] = useState<any>(null)
-  const { user } = useAppSelector((state) => state.auth)
+  const { user: _user } = useAppSelector((state) => state.auth)
 
   const { data, isLoading } = useTasks({ priority: 'high' })
   const tasks = (data?.items ?? []) as Array<any>
@@ -28,18 +28,7 @@ export default function VitalTasks() {
     }
   }
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high':
-        return 'bg-red-100 text-red-800'
-      case 'medium':
-        return 'bg-blue-100 text-blue-800'
-      case 'low':
-        return 'bg-green-100 text-green-800'
-      default:
-        return 'bg-gray-100 text-gray-800'
-    }
-  }
+  // removed unused getPriorityColor
 
   const getStatusColor = (status: string) => {
     switch (status) {

@@ -94,7 +94,7 @@ export const register = createAsyncThunk(
 
 export const updateProfile = createAsyncThunk(
   'auth/updateProfile',
-  async (profileData: UpdateProfileData, { getState, rejectWithValue }) => {
+  async (profileData: UpdateProfileData, { rejectWithValue }) => {
     try {
       // TODO: call backend when profile update endpoint exists
       const me = await fetchCurrentUser()

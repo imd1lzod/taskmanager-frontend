@@ -7,7 +7,7 @@ import { fetchBoardById } from '../../store/slices/boardSlice'
 // import { moveTask } from '../../store/slices/taskSlice'
 import { useTasks } from '../../hooks/tasks'
 import { Button } from '../../components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card'
+// Removed unused Card imports
 import { ArrowLeft, Plus, MoreVertical } from 'lucide-react'
 import TaskColumn from '../../components/task/TaskColumn'
 import TaskCard from '../../components/task/TaskCard'
@@ -43,7 +43,7 @@ export default function BoardPage() {
   }
 
   const handleDragEnd = (event: DragEndEvent) => {
-    const { active, over } = event
+    const { over } = event
     setActiveTask(null)
 
     if (!over) return

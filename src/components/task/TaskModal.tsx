@@ -23,7 +23,7 @@ import {
   SelectValue,
 } from '../ui/select'
 import { Badge } from '../ui/badge'
-import { Avatar, AvatarFallback } from '../ui/avatar'
+// Avatar imports removed (unused)
 import { formatDateTime } from '../../lib/utils'
 import { Calendar, Clock, Trash2, Save } from 'lucide-react'
 
@@ -65,7 +65,8 @@ export default function TaskModal({ task, open, onOpenChange }: TaskModalProps) 
 
   const onSubmit = async (data: UpdateTaskData) => {
     try {
-      await dispatch(updateTask({ id: task.id, ...data })).unwrap()
+      const { id: _ignored, ...rest } = (data as any) || {}
+      await dispatch(updateTask({ id: task.id, ...rest })).unwrap()
       setIsEditing(false)
     } catch (error) {
       // Error is handled by Redux
@@ -221,7 +222,7 @@ export default function TaskModal({ task, open, onOpenChange }: TaskModalProps) 
                   </Button>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {watchedTags.map((tag, index) => (
+                  {(watchedTags ?? []).map((tag, index) => (
                     <Badge key={index} variant="outline" className="flex items-center gap-1">
                       {tag}
                       <button

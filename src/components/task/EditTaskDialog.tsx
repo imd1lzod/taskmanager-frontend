@@ -13,7 +13,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Textarea } from '../ui/textarea'
-import { Save, Calendar, Upload, X } from 'lucide-react'
+import { Calendar, Upload, X } from 'lucide-react'
 
 interface Task {
   id: string
@@ -49,7 +49,6 @@ export default function EditTaskDialog({ open, onOpenChange, task }: EditTaskDia
     handleSubmit,
     reset,
     setValue,
-    watch,
     formState: { errors },
   } = useForm({
     defaultValues: {

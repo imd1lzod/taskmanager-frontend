@@ -9,7 +9,7 @@ import Navbar from '../../components/layout/Navbar'
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const location = useLocation()
+  // removed unused location
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const { user, isAuthenticated } = useAppSelector((state) => state.auth)

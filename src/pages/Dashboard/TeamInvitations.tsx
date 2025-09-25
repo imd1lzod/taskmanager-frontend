@@ -19,7 +19,7 @@ export default function TeamInvitations() {
   const queryClient = useQueryClient()
   const { register, handleSubmit, reset } = useForm<FormValues>()
 
-  const { data, isLoading, refetch } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ['invitations'],
     queryFn: listInvitations,
   })

@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../..
 import { Avatar, AvatarFallback } from '../../components/ui/avatar'
 import { Switch } from '../../components/ui/switch'
 import { Separator } from '../../components/ui/separator'
-import { Save, User, Moon, Sun, Palette } from 'lucide-react'
+import { Save, User, Palette } from 'lucide-react'
 
 export default function Settings() {
   const [isDarkMode, setIsDarkMode] = useState(false)

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useAppSelector } from '../../hooks/redux'
-import { useCategories, useCreateCategory, useDeleteCategory, useUpdateCategory } from '../../hooks/categories'
+import { useCategories, useCreateCategory, useDeleteCategory } from '../../hooks/categories'
 import { Button } from '../../components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card'
 import { Badge } from '../../components/ui/badge'
@@ -17,7 +17,6 @@ export default function TaskCategories() {
 
   const { data: categoriesData } = useCategories()
   const createCategory = useCreateCategory()
-  const updateCategory = useUpdateCategory()
   const deleteCategory = useDeleteCategory()
   const categories = (categoriesData?.items ?? categoriesData ?? []).map((c: any) => ({
     id: String(c.id),
@@ -102,7 +101,7 @@ export default function TaskCategories() {
 
       {/* Categories Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {categories.map((category) => (
+        {categories.map((category: { id: string; name: string; description: string; color: string; taskCount: number; completedCount: number; priority: string }) => (
           <Card key={category.id} className="hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:scale-105">
             <CardHeader>
               <div className="flex items-start justify-between">
