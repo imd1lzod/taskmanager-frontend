@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
+// removed unused useEffect
 import { useForm } from 'react-hook-form'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { acceptInvitation, listInvitations, sendInvitation } from '../../../api/invitations.api'
+import { listInvitations, sendInvitation } from '../../../api/invitations.api'
 import { Button } from '../../components/ui/button'
 import { Input } from '../../components/ui/input'
 import { Badge } from '../../components/ui/badge'

@@ -6,8 +6,6 @@ import { TaskPriority, TaskStatus } from '../../types'
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from '../ui/dialog'
@@ -15,8 +13,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Textarea } from '../ui/textarea'
-import { Badge } from '../ui/badge'
-import { Edit, Save, Calendar, Upload, X, ArrowLeft } from 'lucide-react'
+import { Save, Calendar, Upload, X } from 'lucide-react'
 
 interface Task {
   id: string

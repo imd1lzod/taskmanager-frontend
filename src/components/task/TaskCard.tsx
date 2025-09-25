@@ -6,7 +6,7 @@ import { Card, CardContent } from '../ui/card'
 import { Badge } from '../ui/badge'
 import { Avatar, AvatarFallback } from '../ui/avatar'
 import { formatDate } from '../../lib/utils'
-import { Calendar, Clock, User } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import TaskModal from './TaskModal'
 
 interface TaskCardProps {

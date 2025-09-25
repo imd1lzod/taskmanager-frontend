@@ -5,10 +5,10 @@ import toast from 'react-hot-toast'
 type Priority = 'low' | 'medium' | 'high'
 type Status = 'todo' | 'in-progress' | 'done'
 
-const mapPriorityToApi = (p: Priority): 'Low' | 'Medium' | 'High' => ({ low: 'Low', medium: 'Medium', high: 'High' }[p])
-const mapPriorityFromApi = (p: 'Low' | 'Medium' | 'High'): Priority => ({ Low: 'low', Medium: 'medium', High: 'high' }[p])
-const mapStatusToApi = (s: Status): 'Todo' | 'InProgress' | 'Done' => ({ 'todo': 'Todo', 'in-progress': 'InProgress', 'done': 'Done' }[s])
-const mapStatusFromApi = (s: 'Todo' | 'InProgress' | 'Done'): Status => ({ 'Todo': 'todo', 'InProgress': 'in-progress', 'Done': 'done' }[s])
+const mapPriorityToApi = (p: Priority): 'Low' | 'Medium' | 'High' => ({ low: 'Low', medium: 'Medium', high: 'High' }[p] as 'Low' | 'Medium' | 'High')
+const mapPriorityFromApi = (p: 'Low' | 'Medium' | 'High'): Priority => ({ Low: 'low', Medium: 'medium', High: 'high' }[p] as Priority)
+const mapStatusToApi = (s: Status): 'Todo' | 'InProgress' | 'Done' => ({ 'todo': 'Todo', 'in-progress': 'InProgress', 'done': 'Done' }[s] as 'Todo' | 'InProgress' | 'Done')
+const mapStatusFromApi = (s: 'Todo' | 'InProgress' | 'Done'): Status => ({ 'Todo': 'todo', 'InProgress': 'in-progress', 'Done': 'done' }[s] as Status)
 
 export function useTasks(params?: {
   search?: string

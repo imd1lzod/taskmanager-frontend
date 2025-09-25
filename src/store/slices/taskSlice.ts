@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { Task, CreateTaskData, UpdateTaskData, TaskStatus } from '../../types'
 import { generateId } from '../../lib/utils'
 import { getAllTasks } from '../../../api/task/task.api'

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useAppSelector } from '../../hooks/redux'
 import { Button } from '../../components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card'
-import { Plus, Trash2, Edit, Circle, Play, CheckCircle } from 'lucide-react'
+import { Trash2, Edit, Circle, Play, CheckCircle } from 'lucide-react'
 import EditTaskDialog from '../../components/task/EditTaskDialog'
 import { useTasks } from '../../hooks/tasks'
 

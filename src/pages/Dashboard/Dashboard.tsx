@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 import { logout } from '../../store/slices/authSlice'
 import { fetchBoards } from '../../store/slices/boardSlice'
 import Sidebar from '../../components/layout/Sidebar'
 import Navbar from '../../components/layout/Navbar'
-import { Button } from '../../components/ui/button'
-import { Menu, X } from 'lucide-react'
+// Removed unused imports
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)

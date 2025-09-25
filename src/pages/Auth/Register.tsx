@@ -6,8 +6,8 @@ import { register as registerThunk, clearError } from '../../store/slices/authSl
 import { Button } from '../../components/ui/button'
 import { Input } from '../../components/ui/input'
 import { Label } from '../../components/ui/label'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card'
-import { Eye, EyeOff, Loader2, User, Mail, Lock, Check } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card'
+import { Eye, EyeOff, Loader2, User, Mail, Lock } from 'lucide-react'
 
 interface RegisterFormData {
   firstName: string

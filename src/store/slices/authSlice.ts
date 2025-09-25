@@ -50,7 +50,7 @@ export const login = createAsyncThunk(
   'auth/login',
   async (loginData: LoginData, { rejectWithValue }) => {
     try {
-      const { data } = await api.post('/auth/login', loginData)
+      await api.post('/auth/login', loginData)
       // After setting cookies, fetch the real user from backend
       const me = await fetchCurrentUser()
       const user: User = {
@@ -74,7 +74,7 @@ export const register = createAsyncThunk(
     try {
       // Only send fields accepted by backend
       const payload = { name: registerData.name, email: registerData.email, password: registerData.password }
-      const data = await registerApi(payload)
+      await registerApi(payload)
       // After registration sets cookies, fetch real user
       const me = await fetchCurrentUser()
       const user: User = {

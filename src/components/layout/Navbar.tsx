@@ -13,7 +13,7 @@ interface NavbarProps {
   onMenuClick: () => void
 }
 
-export default function Navbar({ user, isAuthenticated, onLogout, onMenuClick }: NavbarProps) {
+export default function Navbar({ user: _user, isAuthenticated, onLogout: _onLogout, onMenuClick }: NavbarProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false)
   const [isCalendarOpen, setIsCalendarOpen] = useState(false)

@@ -25,7 +25,7 @@ import {
 import { Badge } from '../ui/badge'
 import { Avatar, AvatarFallback } from '../ui/avatar'
 import { formatDateTime } from '../../lib/utils'
-import { Calendar, Clock, User, Trash2, Save } from 'lucide-react'
+import { Calendar, Clock, Trash2, Save } from 'lucide-react'
 
 interface TaskModalProps {
   task: Task
@@ -84,14 +84,16 @@ export default function TaskModal({ task, open, onOpenChange }: TaskModalProps) 
   }
 
   const addTag = () => {
-    if (newTag.trim() && !watchedTags.includes(newTag.trim())) {
-      setValue('tags', [...watchedTags, newTag.trim()])
+    const current = watchedTags ?? []
+    if (newTag.trim() && !current.includes(newTag.trim())) {
+      setValue('tags', [...current, newTag.trim()])
       setNewTag('')
     }
   }
 
   const removeTag = (tagToRemove: string) => {
-    setValue('tags', watchedTags.filter(tag => tag !== tagToRemove))
+    const current = watchedTags ?? []
+    setValue('tags', current.filter(tag => tag !== tagToRemove))
   }
 
   const getPriorityColor = (priority: TaskPriority) => {

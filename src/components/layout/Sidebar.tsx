@@ -7,8 +7,6 @@ import {
   LayoutDashboard,
   Settings,
   LogOut,
-  Plus,
-  Calendar,
   CheckSquare,
   Star,
   List,

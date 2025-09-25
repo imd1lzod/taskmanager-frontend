@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { DndContext, DragEndEvent, DragOverlay, DragStartEvent } from '@dnd-kit/core'
-import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable'
+// Removed unused SortableContext import
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
-import { fetchBoardById, setCurrentBoard } from '../../store/slices/boardSlice'
+import { fetchBoardById } from '../../store/slices/boardSlice'
 // import { moveTask } from '../../store/slices/taskSlice'
 import { useTasks } from '../../hooks/tasks'
 import { Button } from '../../components/ui/button'

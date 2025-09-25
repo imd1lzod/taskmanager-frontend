@@ -4,8 +4,6 @@ import { useUpdateCategory } from '../../hooks/categories'
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from '../ui/dialog'
@@ -13,8 +11,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Textarea } from '../ui/textarea'
-import { Badge } from '../ui/badge'
-import { Edit, Save, Palette, X } from 'lucide-react'
+import { Save, X } from 'lucide-react'
 
 interface Category {
   id: string

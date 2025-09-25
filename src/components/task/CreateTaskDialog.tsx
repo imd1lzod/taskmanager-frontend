@@ -13,8 +13,6 @@ import { CreateTaskData, TaskPriority, TaskStatus } from '../../types'
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from '../ui/dialog'
@@ -22,8 +20,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Textarea } from '../ui/textarea'
-import { Badge } from '../ui/badge'
-import { Plus, Save, Calendar, Upload, X } from 'lucide-react'
+import { Calendar, Upload, X } from 'lucide-react'
 
 interface CreateTaskDialogProps {
   open: boolean
@@ -79,9 +76,9 @@ export default function CreateTaskDialog({ open, onOpenChange, boardId = '1' }: 
         description: data.description,
         priority: selectedPriority,
         status: selectedStatus,
-        startDate: selectedStart || undefined,
-        endDate: selectedEnd || undefined,
-        allDay,
+        // API expects a single date field; map to 'date'
+        date: (selectedStart || selectedEnd) || undefined,
+        // Optional extras not in API are ignored by hook typing
       })
       onOpenChange(false)
       reset()
