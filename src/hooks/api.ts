@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://13.62.99.86:3000',
+  baseURL: import.meta.env.VITE_API_URL || '13.51.158.214',
   withCredentials: true,
 })
 
